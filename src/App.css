@@ -5,7 +5,7 @@
 
 .flexContainer {
   background-color: #282c34;
-  min-height: 100%;
+  min-height: 100vh;
   max-height: 100vh;
   min-width: 100%;
   max-width: 100vh;
@@ -13,6 +13,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   font-size: calc(10px + 2vmin);
+  flex: 1 1 auto;
+  overflow: hidden;
   /* border: 5px solid red; */
   
 }
@@ -23,7 +25,9 @@
   display: flex;
   flex-direction: column;
   min-height: 16vh;
-  max-width: 20vh;
+  max-width: 20vw;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .flexColChild {
@@ -33,18 +37,20 @@
   flex-direction: row;
   min-height: 16vh;
   max-width: 20vh;
+  flex: 1 1 auto;
+  overflow: hidden;
 
 }
 
 .flexGrandChild {
-  border: .5px solid yellow;
+  border: .5px solid white;
   background-color: blue;
   min-width: 10vh;
-  min-height:8vh;
+  min-height:7.8vh;
 }
 
 .flexColGrandChild {
-  border: .5px solid yellow;
+  border: .5px solid white;
   background-color: red;
   min-width: 9.8vh;
   min-height:8vh;
