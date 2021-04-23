@@ -55,7 +55,21 @@ function ChildBoxes() {
     
    const  makeBoxes= ()=>{
     for (let i = 0; i<60; i++){
-        boxes.push()
+        boxes.push(
+            <div>
+            <div className={colPosition} onClick={() => colFlip()}>
+            <div className="flexGrandChild" style={{backgroundColor: colors[getRandomNumber(4)]}}/>
+            <div className="flexGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}/>
+           
+          </div>
+          
+          <div className={rowPosition} onClick={() => rowFlip()}>
+            <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}/>
+            <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}/>
+          </div>
+          </div>
+
+        )
     }
 
     }
@@ -78,275 +92,17 @@ function ChildBoxes() {
       
     }
 
+        makeBoxes()
     return (
        
         <div className="flexContainer">
         
-        <div className={colPosition}
-        
-        onClick={() => colFlip()}
-        
-        >
-          <div className="flexGrandChild"
-            style={{
-                backgroundColor: colors[getRandomNumber(4)],
-     
-            }}
-           
-         >
-          </div>
-          <div className="flexGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
-          </div>
-        </div>
-        
-        <div className={rowPosition} onClick={() => rowFlip()}
-        >
-          <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
-             
-          </div>
-          <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
-          </div>
-        </div>
+        {boxes}
+       
 
 
 
 
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
-        <div className="flexRowChild">
-          <div className="flexGrandChild"></div>
-          <div className="flexGrandChild"></div>
-        </div>
-        <div className="flexColChild">
-          <div className="flexColGrandChild"></div>
-          <div className="flexColGrandChild"></div>
-        </div>
       </div>
 
         )
