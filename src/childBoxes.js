@@ -46,6 +46,7 @@ function ChildBoxes() {
     const colors = ['red', 'white', 'blue', 'yellow']
 
     let [colPosition, colSwitch] = useState("flexColChild")
+    let [rowPosition, rowSwitch] = useState("flexRowChild")
 
     const getRandomNumber = (max) => {
         return Math.floor(Math.random() *max)
@@ -59,13 +60,22 @@ function ChildBoxes() {
 
     }
 
-    function boxFlip() {
+    function colFlip() {
         if(colPosition === "flexRowChild") {
             colSwitch("flexColChild")
         } else {
             colSwitch("flexRowChild")
         }
-        console.log(colPosition)
+ 
+    }
+
+    function rowFlip() {
+        if(rowPosition === "flexColChild") {
+            rowSwitch("flexRowChild")
+        } else {
+            rowSwitch("flexColChild")
+        }
+      
     }
 
     return (
@@ -74,42 +84,33 @@ function ChildBoxes() {
         
         <div className={colPosition}
         
-        onClick={() => boxFlip()}
+        onClick={() => colFlip()}
         
         >
           <div className="flexGrandChild"
             style={{
-                backgroundColor: colors[getRandomNumber(3)],
+                backgroundColor: colors[getRandomNumber(4)],
      
             }}
            
          >
           </div>
-          <div className="flexGrandChild"
-          style={{
-            backgroundColor: colors[getRandomNumber(3)],
-        }}
-            >
+          <div className="flexGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
           </div>
         </div>
-        <div className="flexColChild"
-        style={{
-            flexDirection: {colPosition}
-        }}
-        // onClick={() => colSwitch(colPosition = 'column')}
         
+        <div className={rowPosition} onClick={() => rowFlip()}
         >
-          <div 
-            className="flexColGrandChild"
-           >   
+          <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
              
           </div>
-          <div 
-            className="flexColGrandChild"
-            >   
-
+          <div className="flexColGrandChild" style={{ backgroundColor: colors[getRandomNumber(4)],}}>
           </div>
         </div>
+
+
+
+
         <div className="flexRowChild">
           <div className="flexGrandChild"></div>
           <div className="flexGrandChild"></div>
