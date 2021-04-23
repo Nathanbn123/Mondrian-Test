@@ -1,49 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 
 
-class ChildBoxes extends Component {
-
-    constructor() {
-        super()
-        this.state = {
-            position: 'row',
-            color: ["red", "blue", "white", "yellow"]
-        }
-    }
-
-    getRandomNumber(max) {
-        return Math.floor(Math.random() *max)
-    }
-
-    
-
-    boxFlip (){
-        if(this.state.position !== 'row') {
-           this.setState({
-            position: "column"
-           })
+function ChildBoxes() {
+ 
+//   const boxFlip = () =>{
+//         if(this.state.position !== 'row') {
+//            this.setState({
+//             position: "column"
+//            })
             
-        } else {
-            this.setState({
-                position: "row"
-               })
-        }
-    }
+//         } else {
+//             this.setState({
+//                 position: "row"
+//                })
+//         }
+//     }
 
 
 
 
-    boxClick(){
-        this.setState({
+//    const boxClick = () =>{
+//         this.setState({
         
-            color: ["blue", "white", "yellow", "red"]
-        })
-    }
+//             color: ["blue", "white", "yellow", "red"]
+//         })
+//     }
 
  
 
-
-render() {
 
     // let positionStyle= {
 
@@ -59,9 +43,13 @@ render() {
 
     const boxes = [];
     
+    const colors = ['red', 'white', 'blue', 'yellow']
 
+    let [colPosition, colSwitch] = useState('flexRowChild')
 
-
+    const getRandomNumber = (max) => {
+        return Math.floor(Math.random() *max)
+    }
 
     
    const  makeBoxes= ()=>{
@@ -75,34 +63,41 @@ render() {
     return (
         <div className="flexContainer">
         
-        <div className="flexRowChild"
-        style={{flexDirection: this.state.position}}
-        onClick={() => this.boxFlip()}
+        <div className={colPosition}
+        
+        onClick={() => colSwitch(colPosition = 'flexColChild')}
+        
         >
           <div className="flexGrandChild"
             style={{
-                backgroundColor: this.state.color[this.getRandomNumber(3)],
+                backgroundColor: colors[getRandomNumber(3)],
+     
             }}
+           
          >
           </div>
           <div className="flexGrandChild"
-            style={{backgroundColor: this.state.color[this.getRandomNumber(3)]}}
-            onClick={() => this.boxClick()}>
+          style={{
+            backgroundColor: colors[getRandomNumber(3)],
+        }}
+            >
           </div>
         </div>
         <div className="flexColChild"
-        style={{flexDirection: this.state.position}}
+        style={{
+            flexDirection: "{colPosition}"
+        }}
+        onClick={() => colSwitch(colPosition = 'column')}
+        
         >
           <div 
             className="flexColGrandChild"
-            style={{backgroundColor: this.state.color[this.getRandomNumber(3)]}}
-             onClick={() => this.boxClick()}>   
+           >   
              
           </div>
           <div 
             className="flexColGrandChild"
-            style={{backgroundColor: this.state.color[this.getRandomNumber(3)]}}
-             onClick={() => this.boxClick()}>   
+            >   
 
           </div>
         </div>
@@ -346,6 +341,6 @@ render() {
 
         )
     }
-}
+
 
 export default ChildBoxes
