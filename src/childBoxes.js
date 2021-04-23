@@ -6,13 +6,18 @@ class ChildBoxes extends Component {
     constructor() {
         super()
         this.state = {
-            color: 'red'
+            position: [],
+            color: ["red", "blue", "white", "yellow"]
         }
+    }
+
+    getRandomNumber(max) {
+        return Math.floor(Math.random() *max)
     }
 
     boxClick(){
         this.setState({
-            bgColor: "red"
+            color: ["blue", "white", "yellow", "red"]
         })
     }
 
@@ -27,11 +32,17 @@ render() {
         <div className="flexColChild">
           <div 
             className="flexColGrandChild"
-            style={{backgroundColor: this.state.bgColor}}
+            style={{backgroundColor: this.state.color[this.getRandomNumber(3)]}}
+             onClick={() => this.boxClick()}>   
+             
+
+          </div>
+          <div 
+            className="flexColGrandChild"
+            style={{backgroundColor: this.state.color[this.getRandomNumber(3)]}}
              onClick={() => this.boxClick()}>   
 
           </div>
-          <div className="flexColGrandChild"></div>
         </div>
         <div className="flexRowChild">
           <div className="flexGrandChild"></div>

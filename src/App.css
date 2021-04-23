@@ -5,7 +5,7 @@
 
 .flexContainer {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   max-height: 100vh;
   min-width: 100%;
   max-width: 100vh;
@@ -13,7 +13,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   font-size: calc(10px + 2vmin);
-  border: 5px solid red;
+  /* border: 5px solid red; */
   
 }
 
@@ -45,7 +45,7 @@
 
 .flexColGrandChild {
   border: .5px solid yellow;
-  /* background-color: red; */
+  background-color: red;
   min-width: 9.8vh;
   min-height:8vh;
 }
