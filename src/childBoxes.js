@@ -45,7 +45,7 @@ function ChildBoxes() {
     
     const colors = ['red', 'white', 'blue', 'yellow']
 
-    let [colPosition, colSwitch] = useState('flexRowChild')
+    let [colPosition, colSwitch] = useState("flexColChild")
 
     const getRandomNumber = (max) => {
         return Math.floor(Math.random() *max)
@@ -59,13 +59,22 @@ function ChildBoxes() {
 
     }
 
+    function boxFlip() {
+        if(colPosition === "flexRowChild") {
+            colSwitch("flexColChild")
+        } else {
+            colSwitch("flexRowChild")
+        }
+        console.log(colPosition)
+    }
 
     return (
+       
         <div className="flexContainer">
         
         <div className={colPosition}
         
-        onClick={() => colSwitch(colPosition = 'flexColChild')}
+        onClick={() => boxFlip()}
         
         >
           <div className="flexGrandChild"
@@ -85,9 +94,9 @@ function ChildBoxes() {
         </div>
         <div className="flexColChild"
         style={{
-            flexDirection: "{colPosition}"
+            flexDirection: {colPosition}
         }}
-        onClick={() => colSwitch(colPosition = 'column')}
+        // onClick={() => colSwitch(colPosition = 'column')}
         
         >
           <div 
