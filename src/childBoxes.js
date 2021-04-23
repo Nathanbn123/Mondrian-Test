@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 
 
 function ChildBoxes() {
@@ -36,7 +36,7 @@ function ChildBoxes() {
     }
 
     const  makeBoxes= ()=>{
-        for (let i = 0; i<60; i++){
+        for (let i = 0; i < 30; i++){
             boxes.push(
                 <div>
                 <div className={colPosition} onClick={() => colFlip()}>
